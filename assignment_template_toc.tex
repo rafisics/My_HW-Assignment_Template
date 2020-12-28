@@ -1,0 +1,78 @@
+\documentclass[
+	12pt, % Default font size, values between 10pt-12pt are allowed
+	%letterpaper, % Uncomment for US letter paper size
+	%spanish, % Uncomment for Spanish
+]{fphw_assignment_toc}
+
+\usepackage{my_packages}
+
+%------------------------------------------------------------------------------------
+
+\title{My Assignment \texttt{\#}1}        % Assignment title
+\author{My Name}    % Student name
+\roll{My Roll}                    % Class roll
+\class{My Class}              % Class
+\session{My Session}             % Session
+\email{me@domain.edu}
+\date{Today}        % Due date
+\institute{Department of Physics}              % Institute or school name
+\course{Course Name}                            % Course or course name
+\professor{Teacher Name}                                           % Professor or teacher in charge of the assignment
+
+%------------------------------------------------------------------------------------
+\addbibresource{ref_qm.bib} 
+
+\setcounter{secnumdepth}{-2} 
+%\renewcommand{\thesection}{}  % https://tex.stackexchange.com/a/30202/114006
+%------------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+\pagenumbering{gobble}           % to remove the page numbering
+\newpage
+\pdfbookmark[section]{\contentsname}{toc}
+\tableofcontents
+\newpage
+\pagenumbering{arabic}          % to start the page numbering
+
+%-----------------------------------------
+
+\section{Problem 1 Name~\cite{book:zettili}}
+\begin{problem}
+  \lipsum[1][5-6]
+\end{problem}
+
+\subsection{Solution:}
+\blindtext
+\subsubsection{(a)}
+\lipsum[2][5]
+\subsubsection{(b)}
+\lipsum[3][5]
+
+\section{Problem 2 Name~\cite{book:zettili}}
+\begin{problem}
+\lipsum[4][5-6]
+\end{problem}
+
+\subsection{Solution:}
+\blindtext
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[scale=.3]{example-image-empty}
+  \caption{ \lipsum[5][2]\cite{book:griffiths}}
+  \label{fig:fig1}
+\end{figure}
+
+\newpage
+\section{Appendix}
+\begin{problem}
+  \centering  \lipsum[6][3]
+\end{problem}
+{\footnotesize
+\blindtext \cite{book:balakrishnan}
+}
+
+\newpage
+\phantomsection   % 
+\printbibliography[heading=bibintoc, title={References}]
+
+\end{document}
